@@ -1,2 +1,2 @@
-# faq-acordion
+# faq-accordion
 A React FAQ component 
