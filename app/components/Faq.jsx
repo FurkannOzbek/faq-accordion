@@ -3,6 +3,7 @@ import styles from "./Faq.module.css";
 import { useState } from "react";
 
 export default function Faq() {
+  /*Data we use in the FAQs */
   const faqItems = [
     {
       title: "What is Frontend Mentor, and how will it help me?",
@@ -22,6 +23,8 @@ export default function Faq() {
     },
   ];
   const [activeIndex, setActiveIndexs] = useState([]);
+
+  // handle with toggle
 
   const toggleItem = (index) => {
     setActiveIndexs(
@@ -49,6 +52,7 @@ export default function Faq() {
                   <div className={styles.faqItemTitle} onClick={() => toggleItem(index)}>
                     {item.title}
                   </div>
+                  {/* Condition for the plus or minus icon*/}
                   {activeIndex.includes(index) ? (
                     <div className={styles.minusIcon} onClick={() => toggleItem(index)}>
                       <img src="/icon-minus.svg" alt="Minus Icon" />
@@ -59,6 +63,7 @@ export default function Faq() {
                     </div>
                   )}
                 </div>
+                {/* Condition for showing text or not*/}
                 {activeIndex.includes(index) && (
                   <div className={styles.faqItemText}>{item.text}</div>
                 )}
