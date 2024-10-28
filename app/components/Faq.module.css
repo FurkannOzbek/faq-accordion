@@ -1,0 +1,39 @@
+.wholePage {
+  position: relative;
+  background-color: hsl(279, 100%, 97%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.faqCard {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjusting position to truly center */
+  height: 420px;
+  width: 500px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 30px;
+  border: 2px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.topPart {
+  top: 0;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  color: hsl(287, 42%, 13%);
+}
+.title h1 {
+  margin-left: 20px;
+  font-size: 50px;
+}
+.faqItemContainer {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
