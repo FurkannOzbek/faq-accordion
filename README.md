@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interactive rating component solution
 
-## Getting Started
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI).
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Overview](#overview)
+  - [The Challange](#the-challange)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My Process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+
+
+## Overview
+
+### The Challange
+
+Users are able to  :
+
+- View the FAQ section optimized for any device screen size
+- Experience hover effects for interactive elements
+- Expand questions to read the corresponding answers
+
+
+### Screenshots
+
+![faq2](https://github.com/user-attachments/assets/8aba5317-6b7a-49c8-a3de-13b320fa927f)
+![faq3](https://github.com/user-attachments/assets/5307875a-2d31-4c5c-a0cd-80e396dba677)
+![faqmob](https://github.com/user-attachments/assets/beae5e50-b312-4644-9839-990899d176b6)
+
+### Links
+
+- Challange URL : https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz/hub
+- Live Site URL : https://faq-accordion-beige-tau.vercel.app
+
+
+## My process
+
+### Built with
+
+- React
+- NextJS
+- CSS
+
+### What I learned 
+
+I practiced making active state for one or more elements.
+```js
+const toggleItem = (index) => {
+    setActiveIndexs(
+      (prevIndexs) =>
+        prevIndexs.includes(index)
+          ? prevIndexs.filter((i) => i !== index) // Remove index if it's already active
+          : [...prevIndexs, index] // Add index if it's not active
+    );
+  };
+```
+```js
+  const [activeIndex, setActiveIndexs] = useState([]);
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Useful resources 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [stackoverflow.com](https://stackoverflow.com/questions/60812877/change-active-state-in-a-list-using-usestate) - This helped me for finding out how to handle more than one active indexes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Author
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Website - [Furkan Özbek](https://furkanozbek.dk)
+- Frontend Mentor - [@FurkannOzbek](https://www.frontendmentor.io/profile/FurkannOzbek)
